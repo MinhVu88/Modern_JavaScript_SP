@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+              crossorigin="anonymous">
+        <title>Chapter 16 - Databases (Firebase)</title>
+    </head>
+
+    <body>
+        <div class="container my-5">
+            <h1>Chapter 16 - Databases (Firebase)</h1>
+            <h2>Recipes</h2>
+
+            <!-- recipes_list -->
+            <ul></ul>
+
+            <form>
+                <label for="recipe">Add a new recipe:</label>
+
+                <div class="input-group">
+                    <!-- input_field -->
+                    <input type="text" class="form-control" id="recipe" required>
+
+                    <div class="input-group-append">
+                        <input type="submit" value="Add" class="btn btn-outline-secondary">
+                    </div>
+                </div>
+            </form>
+
+            <!-- unsub_btn -->
+            <button>unsubscribe from real-time changes in the db</button>
+        </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyAJeG5wIW73jdL259frit7d50qDeWW5Vig",
+                authDomain: "js-sec16-shaun.firebaseapp.com",
+                databaseURL: "https://js-sec16-shaun.firebaseio.com",
+                projectId: "js-sec16-shaun",
+                storageBucket: "js-sec16-shaun.appspot.com",
+                messagingSenderId: "540470651164",
+                appId: "1:540470651164:web:f79b7236cdbe1316ab72d9",
+                measurementId: "G-4F6RM16L3X"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const db = firebase.firestore(); // get a reference to/initialize the firestore connection
+        </script>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

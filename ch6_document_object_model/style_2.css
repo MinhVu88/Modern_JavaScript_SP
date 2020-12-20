@@ -1,0 +1,45 @@
+button {
+    display: block;
+    margin: 20px auto;
+    background: crimson;
+    color: white;
+    padding: 6px 10px;
+    border: 0;
+}
+
+.popup-wrapper {
+    /* the last a stands for alpha channel that controls the opacity (0: complete see-thru | 1: not transparent) */
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed; /* always present on screen */
+    /* top: 0 & left: 0 -> the popup starts at the screen's top left */
+    top: 0;
+    left: 0; 
+    width: 100%; /* the popup takes the whole browser */
+    height: 100%;
+    display: none; /* the popup won't shop up in the beginning unless the button is clicked */
+}
+
+.popup {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+}
+
+.popup a {
+    background: crimson;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+}

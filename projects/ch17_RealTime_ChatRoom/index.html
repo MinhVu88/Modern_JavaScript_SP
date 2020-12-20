@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>Ninja Chat</title>
+    </head>
+
+    <body>
+        <!-- FRONT-END -->
+        <!-- container & title -->
+        <div class="container my-4">
+            <h1 class="my-4 text-center">Ninja Chat</h1>
+
+            <!-- buttons for chatrooms -->
+            <div class="chat-rooms mb-3 text-center">
+                <div class="my-2">Choose a chatroom:</div>
+                <!-- the ids are used to update the messages shown when user clicks on 1 of the chatrooms -->
+                <button class="btn" id="general">#general</button>
+                <button class="btn" id="gaming">#gaming</button>
+                <button class="btn" id="music">#music</button>
+                <button class="btn" id="ninja">#ninja</button>
+            </div>
+
+            <!-- chatList -->
+            <div class="chat-window">
+                <ul class="chat-list list-group"></ul>
+            </div>
+
+            <!-- message form -->
+            <form class="new-chat my-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Your message:</div>
+                    </div>
+
+                    <input type="text" id="message" class="form-control" required>
+
+                    <div class="input-group-append">
+                        <input type="submit" value="send" class="btn">
+                    </div>
+                </div>
+            </form>
+
+            <!-- update name form -->
+            <form class="new-name my-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">Update name:</div>
+                    </div>
+
+                    <input type="text" id="name" class="form-control" required>
+
+                    <div class="input-group-append">
+                        <input type="submit" value="update" class="btn">
+                    </div>
+                </div>
+
+                <div class="update-notice"></div>
+            </form>
+        </div>
+
+        <!-- formating the date on the ui -->
+        <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+
+        <!-- BACK-END -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyD16cgXQkwFd6Ntf1Yj_WNZ592BK6MGbsY",
+                authDomain: "js-sec17-shaun.firebaseapp.com",
+                databaseURL: "https://js-sec17-shaun.firebaseio.com",
+                projectId: "js-sec17-shaun",
+                storageBucket: "js-sec17-shaun.appspot.com",
+                messagingSenderId: "461875133738",
+                appId: "1:461875133738:web:66913719864ff289853253",
+                measurementId: "G-ZLB4DCEKV5"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const db = firebase.firestore();
+        </script>
+
+        <!-- the order of the js files is IMPORTANT -->
+        <!-- chat.js interacts with the database & processes the chat data -->
+        <script src="js/chat.js"></script>
+        
+        <!-- ui.js renders the data to the ui -->
+        <script src="js/ui.js"></script>
+
+        <!-- app.js utilizes ui.js & chat.js & runs the application -->
+        <script src="js/app.js"></script>
+    </body>
+</html>

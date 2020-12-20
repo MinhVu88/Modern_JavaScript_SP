@@ -1,0 +1,144 @@
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Chapter 20 - UI Library</title>
+      <style>
+          body {font-size: 1.5em;}
+
+          .container {
+            margin: 40px;
+            margin-top: 60px;
+          }
+
+          /* these styles aren't specific to any UI component (tooltip, dropdown, tabs & snackbar) */
+          button {
+            display: block;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            font-size: 1em;
+            margin: 20px auto;
+            padding: 10px;
+            background: #eee;
+            width: 200px;
+          }
+      </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- tooltip component -->
+            <h2>Tool (46 & 2)</h2>
+            <p>I've been crawling on my belly. Clearing out what could've been. I've been wallowing in my own confused.
+               And insecure delusions. For a piece to cross me over. Or a word to guide me in.
+               I wanna feel the changes coming down. I wanna know what I've been hiding.
+               <span class="tooltip" data-message="A Perfect Circle (Gravity)">[ I choose to live and to grow ]</span>
+               Take and give and to move. Learn and love and to cry. Kill and die and to be.
+               Paranoid and to lie. Hate and fear and to do. What it takes to move through.
+               I choose to live and to lie. Kill and give and to die. Learn and love and to do. What it takes to step through
+            </p>
+
+            <!-- dropdown component -->
+            <h2>Radiohead (fake plastic tree)</h2>
+            <div class="dropdown">
+              <div class="trigger">Verses & choruses (1 & 2)</div>
+              <div class="content">
+                <p>
+                  A green plastic watering can. For a fake Chinese rubber plant. In a fake plastic earth.
+                  That she bought from a rubber man. In a town full of rubber plans. To get rid of itself.
+                  It wears her out. She lives with a broken man. A cracked polystyrene man.
+                  Who just crumbles and burns. He used to do surgery. For girls in the 80s. 
+                  But gravity always wins. And it wears him out.
+                </p>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <div class="trigger">Verse 3, chorus 3 & outro</div>
+              <div class="content">
+                <p>
+                  She looks like the real thing. She tastes like the real thing.
+                  My fake plastic love. But I can't help the feeling.
+                  I could blow through the ceiling. If I just turn and run.
+                  And it wears me out. And if I could be who you wanted.
+                  If I could be who you wanted. All the time. All the time
+                </p>
+              </div>
+            </div>
+
+            <!-- tab component -->
+            <h2>More info</h2>
+            <div class="tabs">
+              <ul>
+                <!-- trigger-like buttons to toggle the tabs' active state & contents -->
+                <li class="trigger active" data-target="#history">Band history</li>
+                <li class="trigger" data-target="#member">Band members</li>
+                <li class="trigger" data-target="#discography">Discography</li>
+              </ul>
+
+              <div id="history" class="content active">
+                <h3>Band history</h3>
+                <p>
+                  The members of Radiohead met while attending Abingdon School, an independent school for boys in Abingdon, Oxfordshire. <br> 
+                  Guitarist and singer Thom Yorke and bassist Colin Greenwood were in the same year, guitarist Ed O'Brien 
+                  and drummer Philip Selway the year above, and multi-instrumentalist Jonny Greenwood, brother of Colin, two years below. <br>
+                  In 1985, they formed On a Friday, the name referring to their usual rehearsal day in the school's music room. <br>
+                  Jonny was the last to join, first on harmonica and then keyboards, but soon became lead guitarist; 
+                  he had previously been in another band, Illiterate Hands, with musician Nigel Powell and Yorke's brother Andy Yorke. <br> 
+                  According to Colin, the band members picked their instruments because they wanted to play together, 
+                  rather than through an interest in the particular instrument: "It was more of a collective angle, and if you could contribute 
+                  by having someone else play your instrument, then that was really cool." <br> At one point, On a Friday featured a saxophone section
+                </p>
+              </div>
+
+              <div id="member" class="content">
+                <h3>Band members</h3>
+                <p>
+                  - Thom Yorke: Thomas Edward Yorke (born 7 October 1968) is an English musician and the main singer-songwriter of the rock band Radiohead. 
+                    A multi-instrumentalist, he mainly plays guitar and keyboards. Along with the other members of Radiohead, 
+                    he was inducted into the Rock and Roll Hall of Fame in 2019. Yorke was born in Northamptonshire. 
+                    His family lived in Scotland before settling in Oxfordshire, England, where he formed Radiohead with his schoolmates. <br>
+                  - Jonny Greenwood: Jonathan Richard Guy Greenwood (born 5 November 1971) is an English musician and composer. 
+                    He is the lead guitarist and keyboardist of the alternative rock band Radiohead, and has written a number of film scores
+                    Along with his elder brother, Radiohead bassist Colin, Greenwood attended Abingdon School in Abingdon near Oxford, England, 
+                    where he met the future band members. <br>
+                  - Colin Greenwood: Colin Charles Greenwood (born 26 June 1969) is an English musician and the bassist for the alternative rock band Radiohead. 
+                    Along with his younger brother, Radiohead guitarist Jonny Greenwood, Greenwood attended Abingdon School in Oxford, England, 
+                    where he met the future band members. Radiohead have since achieved critical acclaim and have sold over 30 million albums. 
+                    Along with bass guitar, Greenwood plays upright bass and electronic instruments. <br>
+                  - Ed O'Brien: Edward John O'Brien (born 15 April 1968) is an English guitarist and member of the alternative rock band Radiohead. 
+                    O'Brien attended Abingdon School in Oxfordshire, England, where he met the other members of Radiohead. 
+                    O'Brien makes extensive use of effects units to create atmospheric sounds and textures, and provides backing vocals. 
+                    His first solo album, Earth, is due in 2020, released under the name EOB. In 2010, Rolling Stone named O'Brien the 59th greatest guitarist of all time. 
+                    Along with the other members of Radiohead, he was inducted into the Rock and Roll Hall of Fame in 2019. <br>
+                  - Philip Selway: Philip James Selway (born 23 May 1967) is an English musician, singer, and songwriter best known as the drummer of English rock group Radiohead. 
+                    In addition to drums, he provides backing vocals, synthesizers, along with occasional guitar and lead vocals, for 7 Worlds Collide. 
+                    Selway is well known for his precision and proficiency in various styles and unusual time signatures, being named the 26th greatest drummer of all time 
+                    by Gigwise in 2008. He has worked with Samaritans since 1991. Selway has released two solo albums: Familial (2010) and Weatherhouse (2014) 
+                </p>
+              </div>
+
+              <div id="discography" class="content">
+                <h3>Discography</h3>
+                <p>
+                  <ul>
+                    <li>Pablo Honey (1993)</li>
+                    <li>The Bends (1995)</li>
+                    <li>OK Computer (1997)</li>
+                    <li>Kid A (2000)</li>
+                    <li>Amnesiac (2001)</li>
+                    <li>Hail to the Thief (2003)</li>
+                    <li>In Rainbows (2007)</li>
+                    <li>The King of Limbs (2011)</li>
+                    <li>A Moon Shaped Pool (2016)</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            <div><button class="snackbar-trigger">Click here</button></div>
+        </div>
+        <script src="assets/bundle.js"></script>
+    </body>
+</html>

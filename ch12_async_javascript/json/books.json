@@ -1,0 +1,7 @@
+[
+    {"title": "Fahrenheit 451", "author": "Ray Bradbury", "published": 1953, "integrity": true},
+
+    {"title": "Brave New World", "author": "Aldous Huxley", "published": 1932, "integrity": true},
+
+    {"title": "Animal farm", "author": "George Orwell", "published": 1945, "integrity": true}
+]
